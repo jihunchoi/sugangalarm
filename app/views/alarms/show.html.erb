@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subject code:</strong>
+  <%= @alarm.subject_code %>
+</p>
+
+<p>
+  <strong>Lecturer:</strong>
+  <%= @alarm.lecturer %>
+</p>
+
+<p>
+  <strong>Alarmed:</strong>
+  <%= @alarm.alarmed %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @alarm.email %>
+</p>
+
+<%= link_to 'Edit', edit_alarm_path(@alarm) %> |
+<%= link_to 'Back', alarms_path %>

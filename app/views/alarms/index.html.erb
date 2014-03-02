@@ -1,0 +1,35 @@
+<h1>Listing alarms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Subject code</th>
+      <th>Lecture code</th>
+      <th>Lecturer</th>
+      <th>Alarmed</th>
+      <th>Email</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @alarms.each do |alarm| %>
+      <tr>
+        <td><%= alarm.subject_code %></td>
+        <td><%= alarm.lecture_code %></td>
+        <td><%= alarm.lecturer %></td>
+        <td><%= alarm.alarmed %></td>
+        <td><%= alarm.email %></td>
+        <td><%= link_to 'Show', alarm %></td>
+        <td><%= link_to 'Edit', edit_alarm_path(alarm) %></td>
+        <td><%= link_to 'Destroy', alarm, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Alarm', new_alarm_path %>

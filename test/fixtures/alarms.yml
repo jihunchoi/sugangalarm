@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  subject_code: MyString
+  lecturer: MyString
+  alarmed: false
+  email: MyString
+
+two:
+  subject_code: MyString
+  lecturer: MyString
+  alarmed: false
+  email: MyString
